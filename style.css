@@ -1,6 +1,14 @@
 body {
   height: 100%;
   text-align: center;
-  background-color: #d2d6fc; /* #eee */
+  background-color: #eee; /* #eee */
   font-family: 'Montserrat', sans-serif;
+}
+
+.container {
+    width: 45%
+}
+
+#img-scale-down {
+    width: 40%;
 }
