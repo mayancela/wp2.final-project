@@ -22,7 +22,6 @@
               <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Animal Care<span class="caret"></span></a>
                 <ul class="dropdown-menu">
                   <li><a href="mammal-care.html">Mammal Care</a></li>
-                  <li><a href="fish-care.html">Fish Care</a></li>
                   <li><a class="active" href="reptile-care.html">Reptile Care</a></li>
                   <li><a href="bird-care.html">Bird Care</a></li>
                 </ul>
@@ -33,5 +32,38 @@
             </ul>
 		  </div>
 		</nav>
+		<h2> All About Pet Care for Reptiles</h2>
+		<img src='../images/reptile-care-banner.jpg' id='img-scale-down'>
+		<div class="container">
+			<em><p><strong>Reptiles: </strong> Reptiles are air-breathing vertebrates covered in special skin made up of scales, bony plates, or a combination of both.
+				Reptiles are tetrapod animals in the class Reptilia, a paraphyletic grouping comprising all amniotes except mammals and birds. </p> </em>
+			<h3> Search a reptile to find out its care information! </h3>
+			<form id="my_form_id">
+				Animal to search: <input type="text" id="user_input"/>
+				<input type="submit" value="Search"/>
+			</form>
+			<br>
+			<div id="response" style="width:95%"></div>
+			<script>
+				$(document).ready(function(){
+					$('#my_form_id').on('submit', function(e){
+						//Stop the form from submitting itself to the server.
+						e.preventDefault();
+						var user_input = $('#user_input').val();
+						$.ajax({
+							type: "POST",
+							url: 'scripts/reptile-script.php',
+							data: {user_input: user_input},
+							success: function(data){
+								// alert(data);
+								$( "#response" ).html(data);
+							}
+						});
+					});
+				});
+			</script>
+			<br>
+			<p><em> Suggested Searches: Corn Snake, Bearded Dragon, or Eastern Box Turtle</em></p>
+		</div>
     </body>
 </html>
