@@ -33,5 +33,38 @@
             </ul>
 		  </div>
 		</nav>
+		<h2> All About Pet Care for Birds</h2>
+		<img src='../images/bird-care-banner.jpg' id='img-scale-down'>
+		<div class="container">
+			<em><p><strong>Birds: </strong> Birds are a group of warm-blooded vertebrates constituting the class Aves,
+				characterized by feathers, toothless beaked jaws, the laying of hard-shelled eggs, a high metabolic rate, a four-chambered heart, and a strong yet lightweight skeleton.</p> </em>
+			<h3> Search a bird to find out its care information! </h3>
+			<form id="my_form_id">
+				Animal to search: <input type="text" id="user_input"/>
+				<input type="submit" value="Search"/>
+			</form>
+			<br>
+			<div id="response" style="width:95%"></div>
+			<script>
+				$(document).ready(function(){
+					$('#my_form_id').on('submit', function(e){
+						//Stop the form from submitting itself to the server.
+						e.preventDefault();
+						var user_input = $('#user_input').val();
+						$.ajax({
+							type: "POST",
+							url: 'scripts/bird-script.php',
+							data: {user_input: user_input},
+							success: function(data){
+								// alert(data);
+								$( "#response" ).html(data);
+							}
+						});
+					});
+				});
+			</script>
+			<br>
+			<p><em> Suggested Searches: Cockatiel, Budgie, or Lovebird</em></p>
+		</div>
     </body>
 </html>
