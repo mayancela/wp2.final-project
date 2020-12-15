@@ -1,0 +1,16 @@
+body{
+	height: 100%;
+	font-size: 19px;
+	font-family: 'Work Sans', sans-serif;
+	color: #333;
+	text-align: center;
+	background-color: #f8f6f0;
+}
+
+.container {
+    width: 45%;
+}
+
+#img-scale-down {
+    width: 40%;
+}

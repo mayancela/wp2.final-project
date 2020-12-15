@@ -1,13 +1,14 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title> All Animal Information </title>
+		<title> Choose the Best Pet For You! </title>
 		<meta charset="utf-8">
 	    <meta name="viewport" content="width=device-width, initial-scale=1">
 	    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 	    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
 		<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400&display=swap" rel="stylesheet">
+		<link rel="shortcut icon" href="images/favicon.ico" />
 		<link rel="stylesheet" href="style.css">
 		<script src="script.js"></script>
 	</head>
@@ -15,11 +16,10 @@
 		<nav class="navbar navbar-default">
 		  <div class="container-fluid">
 		    <div class="navbar-header">
-		      <a class="navbar-brand" href="#">MEDIA PRODUCTION II FINAL PROJECT</a>
+		      <a class="navbar-brand" href="index.html">MEDIA PRODUCTION II FINAL PROJECT</a>
 		    </div>
             <ul class="nav navbar-nav">
-              <li class="active"><a href="#">Home</a></li>
-              <!-- Describe what you can do, pets, different types of pets -->
+              <li class="active"><a href="index.html">Home</a></li>
               <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Animal Care<span class="caret"></span></a>
                 <ul class="dropdown-menu">
                   <li><a href="pages/mammal-care.html">Mammal Care</a></li>
@@ -27,9 +27,7 @@
 				  <li><a href="pages/bird-care.html">Bird Care</a></li>
                 </ul>
               </li>
-              <li><a href="#">Adoptable Pets</a></li>
-              <!-- Click for more info -->
-              <li><a href="#">Cute Baby Animal Gallery</a></li>
+              <li><a href="pages/scripts/pet-gallery.php">Pets Around the World</a></li>
             </ul>
 		  </div>
 		</nav>
@@ -45,6 +43,8 @@
 	        Life Span (Options: Short, Medium, Long): <input type="text" name="LifeSpan" /><br><br>
 	        <input type="submit" />
 	    </form>
+		<br>
+		<p> Check Out Other's Results <a href="pages/table-update.html"> Here </a> </p>
 		<br>
     </body>
 </html>
