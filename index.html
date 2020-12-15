@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title> Human to Animal Years Converter Tool </title>
+		<title> All Animal Information </title>
 		<meta charset="utf-8">
 	    <meta name="viewport" content="width=device-width, initial-scale=1">
 	    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -34,13 +34,17 @@
 		  </div>
 		</nav>
 
-		<h1>Quiz on Important Facts</h1>
-			<div class="quiz-container">
-			  <div id="quiz"></div>
-			</div>
-			<button id="previous">Previous Question</button>
-			<button id="next">Next Question</button>
-			<button id="submit">Submit Quiz</button>
-			<div id="results"></div>
+		<img src='images/animal-banner.png' id='img-scale-down'>
+
+		<h2> Look up the best pet for you!</h2>
+	    <form action="pages/scripts/insert.php" method="post">
+			Name: <input type="text" name="Name" /> <br><br>
+	        Living Space: (Options: House, Apartment) <input type="text" name="LivingSpace" /> <br><br>
+	        Price Range: (Options: $, $$, $$$) <input type="text" name="PriceRange" /><br><br>
+	        Animal Type (Options: Mammal, Reptile, Bird): <input type="text" name="AnimalType" /><br><br>
+	        Life Span (Options: Short, Medium, Long): <input type="text" name="LifeSpan" /><br><br>
+	        <input type="submit" />
+	    </form>
+		<br>
     </body>
 </html>
